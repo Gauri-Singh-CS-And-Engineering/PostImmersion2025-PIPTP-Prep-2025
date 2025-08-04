@@ -1,0 +1,22 @@
+//Code for problem power of two from bit manipulation.
+
+class Solution {
+    public boolean isPowerOfTwo(int n) {
+        boolean flag = false;
+        int result = 1;
+        
+        if (n == 1) {
+            flag = true;
+        } else {
+            while (result <= n) {
+                result = result << 1;
+                if (result == n) {
+                    flag = true;
+                    break;
+                }
+            }
+        }
+        
+        return flag;
+    }
+}
